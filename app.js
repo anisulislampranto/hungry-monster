@@ -1,6 +1,6 @@
-
-
 document.getElementById("search-button").onclick = function () {
+    const searchedMeals = document.getElementById('searched-meals');
+    searchedMeals.innerHTML = ' ';
     const searchInput = document.getElementById("search-input").value;
 
     if (searchInput == "" || searchInput == " ") {
@@ -17,7 +17,7 @@ document.getElementById("search-button").onclick = function () {
             .then(data => displayMeals(data.meals))
 
     }
-
+    
 }
 
 const displayMeals = meals => {
